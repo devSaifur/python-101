@@ -1,27 +1,25 @@
-from main import is_top_weapon
+from main import get_odds_and_evens
 
 run_cases = [
-    ("sword of justice", True),
-    ("bronze mace", False),
-    ("sword of slashing", True),
+    ([1, 7, 2, 5, 3, 4], (4, 2)),
+    ([0, 99, 2, 33, 61, 44, 9, 10, 12, 240, 35, 9082, 1234], (5, 8)),
 ]
 
 submit_cases = run_cases + [
-    ("", False),
-    ("great axe", True),
-    ("silver bow", True),
-    ("golden spear", False),
-    ("spiked knuckles", True),
-    ("spellbook", True),
+    ([], (0, 0)),
+    ([1, 3, 5, 7, 9], (5, 0)),
+    ([2, 4, 6, 8, 10], (0, 5)),
+    ([1], (1, 0)),
+    ([2], (0, 1)),
+    ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], (5, 5)),
 ]
 
 
 def test(input1, expected_output):
     print("---------------------------------")
-    print(f"Input:{input1}")
-    print(f" * Weapon: {input1}")
+    print(f"Inputs: {input1}")
     print(f"Expecting: {expected_output}")
-    result = is_top_weapon(input1)
+    result = get_odds_and_evens(input1)
     print(f"Actual: {result}")
     if result == expected_output:
         print("Pass")

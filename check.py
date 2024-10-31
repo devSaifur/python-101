@@ -1,8 +1,10 @@
-def loop():
-    hello = 100
-
-    for i in range(0, hello):
-        print(f"{i}")
+recipe = ["Dragon Scale", "Unicorn Hair", "Phoenix Feather", "Troll Tusk"]
+ing = ["Dragon Scale", "Goblin Ear", "Phoenix Feather", "Troll Tusk"]
 
 
-loop()
+missing = ["Unicorn Hair"]
+
+percent = 100 - ((len(missing) / len(ing)) * 100)
+
+
+print(percent)

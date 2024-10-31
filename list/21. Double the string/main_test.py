@@ -1,27 +1,29 @@
-from main import is_top_weapon
+from main import double_string
 
 run_cases = [
-    ("sword of justice", True),
-    ("bronze mace", False),
-    ("sword of slashing", True),
+    ("Hello there", "HHeelllloo  tthheerree"),
+    ("General Kenobi", "GGeenneerraall  KKeennoobbii"),
 ]
 
 submit_cases = run_cases + [
-    ("", False),
-    ("great axe", True),
-    ("silver bow", True),
-    ("golden spear", False),
-    ("spiked knuckles", True),
-    ("spellbook", True),
+    ("I am a warrior", "II  aamm  aa  wwaarrrriioorr"),
+    ("Where is the nearest inn?", "WWhheerree  iiss  tthhee  nneeaarreesstt  iinnnn??"),
+    (
+        "what is happening to my chat?",
+        "wwhhaatt  iiss  hhaappppeenniinngg  ttoo  mmyy  cchhaatt??",
+    ),
+    (
+        "what did this potion do to me?",
+        "wwhhaatt  ddiidd  tthhiiss  ppoottiioonn  ddoo  ttoo  mmee??",
+    ),
 ]
 
 
 def test(input1, expected_output):
     print("---------------------------------")
-    print(f"Input:{input1}")
-    print(f" * Weapon: {input1}")
+    print(f"Input: {input1}")
     print(f"Expecting: {expected_output}")
-    result = is_top_weapon(input1)
+    result = double_string(input1)
     print(f"Actual: {result}")
     if result == expected_output:
         print("Pass")

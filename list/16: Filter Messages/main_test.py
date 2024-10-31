@@ -35,7 +35,7 @@ submit_cases = run_cases + [
 
 def test(input, expected_output1, expected_output2):
     print("---------------------------------")
-    print(f"Input:")
+    print(f"Input: {input}")
     print(f" * messages: {input}")
     print("Expecting:")
     print(f" * filtered messages: {expected_output1}")
