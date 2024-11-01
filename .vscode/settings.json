@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["dwarven", "unpurchased"]
+  "cSpell.words": ["dwarven", "unpurchased"],
+  "python.REPL.enableREPLSmartSend": false
 }
