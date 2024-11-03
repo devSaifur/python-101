@@ -1,4 +1,4 @@
-from main import *
+from main import Archer, Crossbowman
 
 run_cases = [
     ("Will the Archer", 1, "Darren the Crossbowman", 4, None, 1),
