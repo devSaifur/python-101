@@ -84,7 +84,7 @@ def test(input1, input2, input3, expected_output):
     print(f"List 1: {input1}")
     print(f"List 2: {input2}")
     if input3:
-        print(f"Reversed")
+        print(f"Reversed {input3}")
     print(f"Expected: {expected_output}")
     result = deduplicate_lists(input1, input2, input3)
     print(f"  Actual: {result}")
