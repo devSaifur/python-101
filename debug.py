@@ -3,4 +3,6 @@ query = "Hello World".lower().split() + "How are you?".lower().split()
 
 list = [1, 2, 3, 4, 5, 6]
 
-print(list[2:4])
+empty = ""
+
+print(not empty)
