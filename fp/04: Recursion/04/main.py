@@ -1,10 +1,12 @@
-def list_files(current_file_tree: dict, current_path="") -> list:
+def list_files(current_filetree: dict, current_path="") -> list:
     file_list = []
 
-    for file in current_file_tree:
-        if not current_file_tree[file]:
-            file_list.append(f"/{file}")
+    for node in current_filetree:
+        next_file_tree = current_filetree[node]
+        if not next_file_tree:
+            file_list.append(f"{current_path}/{node}")
         else:
-            return file_list
+            next_filepaths = list_files(next_file_tree, f"{current_path}/{node}")
+            file_list.extend(next_filepaths)
 
     return file_list
