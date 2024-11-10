@@ -1,4 +1,8 @@
-my_string = ["hello", "world"]
+def fn(x):
+    print("hello world", x)
 
 
-print(my_string[1::])
+hello = {"cool": fn}
+
+
+hello["cool"]("Saifur")
