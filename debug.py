@@ -1,8 +1,3 @@
-def fn(x):
-    print("hello world", x)
+hello_word = "hello world"
 
-
-hello = {"cool": fn}
-
-
-hello["cool"]("Saifur")
+print(hello_word[:-1])
